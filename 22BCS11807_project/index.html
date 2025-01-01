@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">EmailManager</a>
+            <ul class="nav-links">
+                <li><a href="#" id="inbox">Inbox</a></li>
+                <li><a href="#" id="sent">Sent</a></li>
+                <li><a href="#" id="drafts">Drafts</a></li>
+                <li><a href="#" id="trash">Trash</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="email-list">
+            <h2>Inbox</h2>
+            <button id="compose-btn" class="hidden">Compose Email</button>
+            <ul id="emails"></ul>
+        </div>
+        <div class="email-details hidden">
+            <button id="back-btn">Back to List</button>
+            <h2>Email Details</h2>
+            <p id="email-content"></p>
+        </div>
+    </main>
+
+    <!-- Optional Compose Email Modal -->
+    <div id="compose-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Compose Email</h2>
+            <form id="compose-form">
+                <label for="to">To:</label>
+                <input type="email" id="to" name="to">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
